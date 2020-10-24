@@ -4,11 +4,12 @@ Group111_Project_ Proposal<br />
 1. Brief identification of group members<br />
   Lee Hiu Long (3035687077)		u3568707@connect.hku.hk<br />
   Liao Jiayang (3035637280)		susan823@connect.hku.hk<br />
+</pre>
 2. Game description:<br />
   a) Basic Game rules<br />
   A 10X10 game board consisting of 100 tiles of 5 symbols are randomly generated in each game-start. 3 to 5 consecutive tiles (can be either horizontal or vertical) of the same symbol will be eliminated and the player will get some scores. To achieve this, players can swap two tiles by entering the positions of tiles to be swapped (e.g. A1 A2). If the player gets 4 consecutive tiles of the same symbol, the whole row or column will be eliminated. If the player gets 5 consecutive tiles, the player gets a ‘!’, which is a bomb and can destroy all tiles of a symbol when the player swaps the bomb with a tile containing that particular symbol.<br />
   To win a level, the player has to reach a certain amount of scores within the time limit of 3 minutes. The next level will also have the same time limit of 3 minutes but have a higher score requirement. The score requirement of a level follows a predetermined function f(n) with n as the level number.<br />
-
+<pre>
 3. Features plan to implement  (Code requirement 1~5)<br />
   (1) Generation of random game sets or events<br />
       a) 10x10 board randomly generated with 5 different symbols <br />
