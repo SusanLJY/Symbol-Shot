@@ -14,20 +14,6 @@
 #include "NewGame.h"
 using namespace std;
 
-// struct HighestLevel{
-//   string user_name;
-//   int level;
-//   char[] time; //timeOfGettingThisRecord;
-// }
-
-// struct ShortestTime{
-//   int level;
-//   string user_name;
-//   char[] time; //timeOfPassingTheLevel;
-// }
-
-// bool operator<(const HighestLevel & a, const HighestLevel & b);
-// bool operator<(const ShortesTime & a, const ShortesTime & b);
 void savingHighestLevelRecord();
 void savingShortestTimeRecord();
 void restoringHighestLevelRecord();
