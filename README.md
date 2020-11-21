@@ -20,7 +20,7 @@ Group111_Project_Final_Verison <br />
       a) Using Queue structure to store the records of game (Highest evel, Shortest time, and User name)<br />
       b) 2D array for the board (10x10) --keep updating, and will be generated randomly when level starts<br />
       c) user’s input of swapping pair (e.g. A1 A2) will change to indices in 2D array for internal interpretation<br />
-      d) 
+      d) Using external variables (i.e., int level, bool newBoard...) to store the current game progress.
   (3) Dynamic memory management<br />
       a) STL container vector (dynamic) for storing username and top 10 higest level record, its functions are used, and its sorting algorithm is also used for the latter one.<br />
       b) STL container map (dynamic) for storing shortest time level record,with levels as the keys and ShortestTime structure as the values There is no level limit in our game, so the size of the map is dynamic.<br />
