@@ -1,3 +1,19 @@
+/* Record.cpp
+  This file includes all the structs, variables, and functions needed in Symbol-Shot to save, store, show, and restore the users' game records.
+ Variables and Functions include:
+  1. Structs:
+    1.1 HighestLevel:
+      Includes userName, highest level, and Time of achieving this record (GMT).
+    1.2 ShortestTime:
+      Includes level, time of passing the level, score, and user name.
+  2. Variables: //Both using dynamic memory.
+    vector<HighestLevel> highestLevelRecord:
+          The highest current level that a player has achieved.
+    map<int,ShortestTime> shortestTimeRecord:
+          The shortest time of passing each level in history.
+  3. Functions:
+    Includes functions to save, store, show, restore, and delete(clean) the users' game records.
+*/
 //Imports
 #include<iostream>
 #include<algorithm>
@@ -160,7 +176,7 @@ void storeHighestLevelRecord(string name, int level){
 
 void storeShortestTimeRecord(int level, string user_name, int timeOfPassing, int score) {
   ShortestTime st = {level, timeOfPassing, score, user_name};
-	if (level != 0){
+	if (level != 0 and score !=0){
 	  if (shortestTimeRecord.count(level) == 0 || st < shortestTimeRecord[level])
       shortestTimeRecord[level] = st;
   }
