@@ -1,11 +1,12 @@
-/*Workflow
+/* Menu.cpp
+ Workflow
   1. void showMenu() to show different commands in Menu.
   2. void controlMenu() has different cases:
     2.1 Play 
       If you are totally new to this game, i.e., no previous user name, the game will send you to newGame stage.
       else --> using the last user name to play.
     2.2. New Game 
-      Show current GMT time and input a new user name (without ' '). Exception dealing: If the user name is used before, it will ask you to input another.
+      Start a new game with a new user name.
     2.3 Clear
       Delete all the records and related txt files.
     2.4 Records 
