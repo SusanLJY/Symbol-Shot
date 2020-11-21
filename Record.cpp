@@ -15,13 +15,13 @@
     Includes functions to save, store, show, restore, and delete(clean) the users' game records.
 */
 //Imports
-#include<iostream>
-#include<algorithm>
-#include<string>
-#include<map>
-#include<vector>
-#include<iomanip>
-#include<fstream>
+#include <iostream>
+#include <algorithm>
+#include <string>
+#include <map>
+#include <vector>
+#include <iomanip>
+#include <fstream>
 #include "Timer.h"
 #include "Menu.h"
 #include "NewGame.h"
@@ -52,12 +52,11 @@ struct ShortestTime{
 };
 
 
-//Arrays: Vector and Map
+//Dynamic memory management: Vector and Map
 vector<HighestLevel> highestLevelRecord;
 map<int,ShortestTime> shortestTimeRecord;
 
 //Operator Overloading
-
 bool operator<(const HighestLevel & a, const HighestLevel & b) {
   if (a.level == b.level) return (a.time < b.time);
   return (a.level > b.level);
@@ -68,8 +67,7 @@ bool operator<(const ShortestTime & a, const ShortestTime & b) {
 }
 
 
-//Methods: storing records
-
+//Methods: save, store, restore, show, and clean records
 void savingHighestLevelRecord(){
   ofstream fout;
   fout.open("Highest Level Record.txt", ios::ate);
@@ -86,11 +84,10 @@ void savingShortestTimeRecord(){
   ofstream fout;
   fout.open("Shortest Time Record.txt", ios::ate);
   if (fout.fail()) {
-		cout << "Error in saving game shortest time record information!" << endl;
+	  cout << "Error in saving game shortest time record information!" << endl;
     menu();
   }
   for (int i=1; i<shortestTimeRecord.size()+1; i++){
-    // if (shortestTimeRecord[0].level == ) continue;
     fout << shortestTimeRecord[i].level<<" "<<shortestTimeRecord[i].time<<" "<<shortestTimeRecord[i].score<<" "<<shortestTimeRecord[i].name<<endl;
   }
 	fout.close();
@@ -103,10 +100,8 @@ void restoringHighestLevelRecord(){
 		cout << "Creating Highest Level Record.txt ..." << endl;
     restoringHighestLevelRecord();
   }
-  string name;
-	int level;
-	string time;
-	int i = 0;
+  string name, time;
+	int level, i=0;
   HighestLevel h;
 	while (fin >> name >> level >> time){
     bool duplicate =false;
@@ -183,7 +178,6 @@ void storeShortestTimeRecord(int level, string user_name, int timeOfPassing, int
   savingShortestTimeRecord();
 }
 
-//Methods: showing records
 void showRecords(){
   char rn;
   cout << endl;
