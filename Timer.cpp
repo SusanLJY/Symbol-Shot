@@ -8,15 +8,15 @@
 #include "NewGame.h"
 using namespace std;
 
-bool Timer::isPause(){     
+bool Timer::isPause(){   //check if timer is paused  
     if(is_pause)  return true;  
     else  return false;  
 } 
-bool Timer::isStop(){  
+bool Timer::isStop(){  //check if timer is stopped
     if(is_stop)  return true;  
     return false;  
 }  
-void Timer::Start(){  
+void Timer::Start(){  //start timer
     if(is_stop){  
         start_time = time(0);  
         is_stop = false;  
@@ -25,7 +25,7 @@ void Timer::Start(){
         start_time += time(0)-pause_time; //update start_time: current_time - pause_time + last_start_time = current_start_time   
     }else start_time = time(0);
 } 
-void Timer::Pause(){  
+void Timer::Pause(){  //pause the timer
     if(is_stop||is_pause) return;   
     else{  
         is_pause = true;  
@@ -34,7 +34,7 @@ void Timer::Pause(){
     }  
 }
 
-void Timer::Stop(){  
+void Timer::Stop(){  //stop the timer
     if(is_stop) return ;   
     else if(is_pause){ //Change the status of timer  
         is_pause = false;  
@@ -45,7 +45,7 @@ void Timer::Stop(){
     }   
 }
 
-void Timer::currentTime(int* ti){
+void Timer::currentTime(int* ti){ //get current time (GMT)
 	time_t curr_time;
 	curr_time = time(NULL);
 	tm *tm_local = localtime(&curr_time);
