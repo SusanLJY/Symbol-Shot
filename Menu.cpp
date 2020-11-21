@@ -1,23 +1,19 @@
-/*
-    1. void showInstructions(int current_level);
-        bool valid_instr=true;
-        string instruction;
-        while valid_instr
-        1) if (current_level==0); 
-            print: NewGame, Quit, Record 
-            cin>>instruction;
-            Switch
-                NewGame --> New_Game()
-                Quit --> Exit()
-                Record --> Record()
-
-        2) else; Play, NewGame, Pause, Quit, Record
-            Similar to 1)
-1. Play
-2. New Game
-4. Records
-5. Instructions
-6. Quit
+/*Workflow
+  1. void showMenu() to show different commands in Menu.
+  2. void controlMenu() has different cases:
+    2.1 Play 
+      If you are totally new to this game, i.e., no previous user name, the game will send you to newGame stage.
+      else --> using the last user name to play.
+    2.2. New Game 
+      Show current GMT time and input a new user name (without ' '). Exception dealing: If the user name is used before, it will ask you to input another.
+    2.3 Clear
+      Delete all the records and related txt files.
+    2.4 Records 
+      Show previous records: HighestLevelRecord or ShortestTimeRecord.
+    2.5 Instructions
+      Show instructions of playing Symbol-Shot
+    2.6 Quit
+      Save all current records and quit Symbol-Shot.
 */
 #include <iostream>
 #include "instruction.h"
@@ -38,7 +34,10 @@ void controlMenu(){
 	cout << "  ";
   cin >> command;
   switch (command) {
-    case 'P': play(); break;
+    case 'P': 
+      if (userName.size()==0) newGame(); //deal with exceptions
+      else play(); 
+      break;
     case 'N': newGame(); break;
 		case 'C': cleanRecords(); break;
     case 'R': showRecords(); break;
@@ -53,6 +52,7 @@ void controlMenu(){
     default: cout<<"  Invalid! Please input again!"<<endl; break;
   }
 }
+
 void menu(){
   showMenu();
   controlMenu();
