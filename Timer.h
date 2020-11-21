@@ -1,5 +1,4 @@
 // Timer.h
-// #pragma once
 #ifndef _TIMER_H
 #define _TIMER_H
  
@@ -10,7 +9,7 @@
 #include "NewGame.h"
 #include "Playing.h"
 using namespace std;
-
+//Declare the Timer class
 class Timer{  
     private:   
         long pause_time;  
@@ -21,7 +20,7 @@ class Timer{
         long start_time;  
         bool isPause();
         bool isStop();  
-        //3 function of Timer
+        //functions of Timer
         void Start();   
         void Pause();  
         void Stop();  
