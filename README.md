@@ -6,7 +6,7 @@ Group111_Project_Final_Verison <br />
   Liao Jiayang (3035637280)		susan823@connect.hku.hk<br />
 </pre>
 2. Game description:<br />
-  a) Basic Game rules (This part can also be seen in the instruction.txt)<br />
+  a) Basic Game rules (This part can also be seen by calling Instruction from menu (read from instruction.txt))<br />
   A 10X10 game board consisting of 100 tiles of 6 symbols with different colors is randomly generated at the beginning of each game. 3, 4 or 5 consecutive tiles (can be either horizontal or vertical) of the same symbol will be eliminated. For every swapping, the number of elimination will becountd as "hits",  and the player will get scores according to both number of eliminated symbols and hits.
   To achieve this, players can swap two tiles by entering the positions of tiles to be swapped (e.g. A1 A2). If the player gets 4 consecutive tiles of the same symbol, the whole row or column will be eliminated. If the player gets 5 consecutive tiles, the player gets a '!', which is a bomb and can destroy all tiles of a symbol when the player swaps the bomb with a tile containing that particular symbol.<br />
     At the beginning of each level, the system will give you a '!' randomly in the board.<br />
