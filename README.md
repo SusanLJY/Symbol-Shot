@@ -14,7 +14,7 @@ Group111_Project_Final_Verison <br />
 <pre>
 3. Features have implemented  (Code requirement 1~5)<br />
   (1) Generation of random game sets or events<br />
-      a) 10x10 board randomly generated with 5 different symbols <br />
+      a) 10x10 board randomly generated with 6 different symbols <br />
       b) Every time after elimination, the symbols will first fall down and then randomly generate new symbols in the blank area. After that, the game will print the new board. <br />
   (2) Data structures for storing game status<br />
       a) Using Queue structure to store the records of game (Highest evel, Shortest time, and User name)<br />
