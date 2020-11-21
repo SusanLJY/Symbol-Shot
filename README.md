@@ -32,10 +32,11 @@ Group111_Project_Final_Verison <br />
   (1) Read the instruction.txt file to get the basic information of Symbol-Shot. <br />
   (2) Save and restore records<br />
       read, write and restore the user-name, top 10 highest level, and short time of each level to txt files.<br />
+      txt Files: User Name.txt, Highest Level Record.txt, Shortest Time Record.txt
       Exception dealing: if the files do not exist, then create txt files for each saving.<br />
       
 5. Program codes in multiple files<br />
-  cpp and header files:
+  cpp and header files:<br />
     1) main.cpp: Initialize the game<br />
     2) Menu.cpp: print the command menu in this stage and enter the other part of Symbol-Shot according to user's input.<br />
     3) Menu.h: header file of menu.cpp<br />
