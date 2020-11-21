@@ -1,0 +1,55 @@
+  **************** Menue  Control ****************
+
+  Enter a character 'P', 'N', 'R', 'I', 'Q' to 
+  access the corresponding functions.
+
+  [P] Play: continue the last attempt
+  [N] New Game: start a new attemp
+  [R] Records: ranking lists of highest time 
+      and shortest time
+  [I] Instruction: this instruction
+  [Q] Quit: quit the game
+
+  ****************** Game Rules ******************
+
+  A 10X10 game board consisting of 100 tiles
+  of 6 symbols are randomly generated in each
+  game-start. 3 to 5 consecutive tiles (can be
+  either horizontal or vertical) of the same
+  symbol will be eliminated and the player will
+  get some scores.
+
+  To achieve this, players can swap two tiles
+  by entering the positions of tiles to be
+  swapped (e.g. A1 A2). 
+
+  If the player gets 4 consecutive tiles of the
+  same symbol, the whole row or column will be
+  eliminated.
+
+  If the player gets 5 consecutive tiles,
+  the player gets a '!', which is a bomb and
+  can destroy all tiles of a symbol when the
+  player swaps the bomb with a tile containing
+  that particular symbol.
+
+  At the beginning of each level, the system 
+  will give you a '!' randomly in the board.
+
+  To win a level, the player has to reach a
+  certain amount of scores within the time
+  limit. If the player has already reached the 
+  require score of the level, the game will stop.
+  The next level will have the shorter time limit
+  and a higher score requirement.
+
+  The time limit will decrease from 60 seconds 
+  and be at least 30 seconds. The score requirement
+  follows a predefined function S(level)=100+50*level.
+  For each swapping, score = hits * eliminated symbols.
+
+  You can check the high achievers of highest
+  current level and shortest time of each finisished
+  level in [R] Record. Hope to see you there!
+
+  Enjoy your game!
