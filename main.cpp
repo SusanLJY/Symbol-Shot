@@ -1,12 +1,12 @@
 /* Workflow
-    1. print Guide
-    2. initialization
-        current_level=0
-        string[10][3] record_level={["0","0","0"]}  --> [User's name, Level, CurrentTime]
-        vector<string[3]> record_shortest_time --> [Level(1-current), User's name, Time of passing the level]
-    3. call Menu
-    4. 
+  1. initialization
+    1.1 Call restoring functions in "Record.h" to restore the userName, ShortestTimeRecord, and HighestLevelRecord from different txt files.
+    
+  2. Start the game or not?
+    2.1 if yes --> go to menu.
+    2.2 else   --> quit the game
 */
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
