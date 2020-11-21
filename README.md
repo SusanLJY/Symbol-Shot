@@ -7,10 +7,11 @@ Group111_Project_Final_Verison <br />
 </pre>
 2. Game description:<br />
   a) Basic Game rules (This part can also be seen by calling Instruction from menu (read from instruction.txt))<br />
-  A 10X10 game board consisting of 100 tiles of 6 symbols with different colors is randomly generated at the beginning of each game. 3, 4 or 5 consecutive tiles (can be either horizontal or vertical) of the same symbol will be eliminated. For every swapping, the number of elimination will becountd as "hits",  and the player will get scores according to both number of eliminated symbols and hits.
+  A 10X10 game board consisting of 100 tiles of 6 symbols with different colors is randomly generated at the beginning of each game. Here, we use current time as the seed of random. 3, 4 or 5 consecutive tiles (can be either horizontal or vertical) of the same symbol will be eliminated. For every swapping, the number of elimination will becountd as "hits",  and the player will get scores according to both number of eliminated symbols and hits.
   To achieve this, players can swap two tiles by entering the positions of tiles to be swapped (e.g. A1 A2). If the player gets 4 consecutive tiles of the same symbol, the whole row or column will be eliminated. If the player gets 5 consecutive tiles, the player gets a '!', which is a bomb and can destroy all tiles of a symbol when the player swaps the bomb with a tile containing that particular symbol.<br />
     At the beginning of each level, the system will give you a '!' randomly in the board.<br />
   To win in a level, the player has to reach a certain amount of scores within the time limit. The next level will also have the shorter time limit (>=30) and a higher score requirement. The score requirement of a level follows a predetermined function f(level) = 100 + 50 * level.<br />
+  Users can view the game records of Top 10 highest current level and shortest time of finished levels in Record.<br />
 <pre>
 3. Features have implemented  (Code requirement 1~5)<br />
   (1) Generation of random game sets or events<br />
@@ -23,6 +24,7 @@ Group111_Project_Final_Verison <br />
       d) Using external variables (i.e., int level, bool newBoard...) to store the current game progress.<br />
       e) Using C++ structures for a single highest level or shortest time record.<br />
       f) Using C++ classes for timer.<br />
+      g) Operator overloading is used in facilitating comparison and sorting, for the map and vector of structures, to store the best or top 10 records with some special cases considered, such as same user will not appear twice in Highest Level, New record replace old record if the former surpasses the latter, if the value of a particular parameter is same then compare another parameter, etc.<br />
   (3) Dynamic memory management<br />
       a) STL container vector (dynamic) for storing username and top 10 higest level record, its functions are used, and its sorting algorithm is also used for the latter one.<br />
       b) STL container map (dynamic) for storing shortest time level record,with levels as the keys and ShortestTime structure as the values There is no level limit in our game, so the size of the map is dynamic.<br />
