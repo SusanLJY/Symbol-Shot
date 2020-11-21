@@ -1,4 +1,5 @@
-/* Workflow
+/*instruction.cpp
+ Workflow
   1. Read the instruction.txt and deal with exceptions.
   2. If read successfully --> print the instructions of playing Symbol-Shot.
   3. Press 'M' to return to menu.
