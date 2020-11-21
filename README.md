@@ -11,8 +11,11 @@ Group111_Project_Final_Verison <br />
   To achieve this, players can swap two tiles by entering the positions of tiles to be swapped (e.g. A1 A2). If the player gets 4 consecutive tiles of the same symbol, the whole row or column will be eliminated. If the player gets 5 consecutive tiles, the player gets a '!', which is a bomb and can destroy all tiles of a symbol when the player swaps the bomb with a tile containing that particular symbol. Note that no points will be given in such elimination but it can help in getting better pattern or even getting more hits.<br />
   At the beginning of each level, the system will give you a '!' randomly in the board.<br />
   To win in a level, the player has to reach a certain amount of scores within the time limit. The next level will also have the shorter time limit (>=30) and a higher score requirement. The score requirement of a level follows a predetermined function f(level) = 100 + 50 * level.<br />
-  Users can view the game records of Top 10 highest current level and shortest time of finished levels in Record.<br />
-  An assumption of the game is that there will always be a valid move available.<br />
+  b) Game record
+     Users can view the game records of Top 10 highest current level and shortest time of finished levels in Record.
+     Records are saved in files when quitted and can be restored once run again. It can also be cleared.<br />
+  c) Assumption
+     There will always be a valid move available. In fact the probability of no valid move available is almost 0.<br />
 <pre>
 3. Features have implemented  (Code requirement 1~5)<br />
   (1) Generation of random game sets or events<br />
