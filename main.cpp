@@ -6,27 +6,26 @@
     2.1 if yes --> go to menu.
     2.2 else   --> quit the game
 */
-
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
 #include <cmath>
-#include "NewGame.h" //one function to restore userNames
-#include "Menu.h"    //function menu();
-#include "Record.h"  //two functions for restoring Records
+#include "NewGame.h"
+#include "Menu.h"
+#include "Record.h"
 using namespace std;
 
 int main() {
-	cout << "\n  Restoring User Name Record...\n" << endl;
+	cout << "\n  Restoring User Name Record..." << endl;
 	restoringUserNameRecord();
-	cout << "  Restoring Shortest Time Record...\n" << endl;
+	cout << "\n  Restoring Shortest Time Record..." << endl;
 	restoringShortestTimeRecord();
-	cout << "  Restoring Highest Level Record...\n" << endl;
+	cout << "\n  Restoring Highest Level Record..." << endl;
 	restoringHighestLevelRecord();
-  cout<<"  Done!\n"<<endl;
+  cout<<"\n  Done!\n"<<endl;
   char choice;
   while (1){
-    cout<<"\033[;31m  Do \033[;32myou \033[;33mwant to \033[;34m  enjoy \033[1;35mSymbol Shot\033[0m \033[;36mnow? \033[4;31mY or N\033[0m"<<endl;
+    cout<<"\033[;31m  Do \033[;32myou \033[;33mwant to\033[;34m enjoy \033[1;35mSymbol Shot\033[0m \033[;36mnow? \033[4;31mY or N\033[0m"<<endl;
     cin>>choice;
     if (choice=='Y') {
       system("clear");
@@ -39,4 +38,3 @@ int main() {
   }
   return 0; 
 }
- 
