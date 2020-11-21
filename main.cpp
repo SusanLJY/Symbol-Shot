@@ -1,6 +1,6 @@
 /* Workflow
   1. initialization
-    1.1 Call restoring functions in "Record.h" to restore the userName, ShortestTimeRecord, and HighestLevelRecord from different txt files.
+    1.1 Call restoring functions in "NewGame.h" and "Record.h" to restore the userName, ShortestTimeRecord, and HighestLevelRecord from different txt files.
 
   2. Start the game or not?
     2.1 if yes --> go to menu.
@@ -11,9 +11,9 @@
 #include <cstdlib>
 #include <ctime>
 #include <cmath>
-#include "NewGame.h" //external variable userName
+#include "NewGame.h" //one function to restore userNames
 #include "Menu.h"    //function menu();
-#include "Record.h"  //three functions for restoring
+#include "Record.h"  //two functions for restoring Records
 using namespace std;
 
 int main() {
