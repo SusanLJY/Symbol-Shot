@@ -32,7 +32,7 @@ Group111_Project_Final_Verison <br />
   (1) Read the instruction.txt file to get the basic information of Symbol-Shot. <br />
   (2) Save and restore records<br />
       read, write and restore the user-name, top 10 highest level, and short time of each level to txt files.<br />
-      txt Files: User Name.txt, Highest Level Record.txt, Shortest Time Record.txt
+      txt Files: UserNameRecord.txt, Highest Level Record.txt, Shortest Time Record.txt
       Exception dealing: if the files do not exist, then create txt files for each saving.<br />
       
 5. Program codes in multiple files<br />
