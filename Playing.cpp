@@ -1,7 +1,46 @@
-/* Functions needed
-    1. Timing 
-    2.
+/* Playing.cpp
+  This file stores all the functions that needed in playing Symbol-Shot of any level.
+ Functions here:
+    1. bool win():
+      1.1 Check whether the game have passed the time limit:
+        if yes --> Game Over --> back to menu.
+      1.2 Check whether the score meets the score limit:
+        if yes:
+          Enter the next level? Yes --> Next Level
+            No --> Show Records
+        else: continue playing.
+    2. void generate():
+      Randomly generate symbols in blank space of board.
+      print out the board after generating.
+    3. int check(int):
+      Using hits as parameter(no. of elimination in a single swapping).
+      Check whether there exists elimination.
+        If yes:
+          send the index as parameter to elimination function.
+          hits++ 
+      return hits
+    4. void swap(int,int,int,int): 
+      Do swapping acoording to user's input
+    5. bool find(string, char):
+      Find a charactor in a string
+    6. bool validInput(string, string):
+      Check whether user's input is valid or not.
+    7. void eliminate(int,int,char,int):
+      Eliminate the symbols according to its index
+    8. void deletet(int, int, int, int):
+      Delete the eliminated symbols in board. (Since delete is not a valid identifier, we use deletet here.)
+    9. void fall():
+      If the space in board is blank, let the upper symbols falls down.
+    10. int pairElimination();
+      If input is a pair of normal symbols (not include '!'), then eliminate them by pair.
+    11. void printBoard():
+      Print the game board of Symbol-Shot with different colors.
+    12. void superElimination(char):
+      If input contains special symbols('!'), then eliminate all the same normal symbols as user specifies.
+    13. void play():
+      The main workflow in play stage.
 */
+//import
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -12,6 +51,7 @@
 #include "NewGame.h"
 using namespace std;
 
+//global variable Declaration (and initialization);
 const int bs = 10;
 char board[bs][bs]={};
 int score=0;
@@ -62,7 +102,6 @@ bool win(){
       cin>>choice;
     }
     if (choice=='Y'){
-      //system("color 05");
       cout<<"-------------------\n"<<"----Next-Level-----\n"<<"-------------------"<<endl;
       play();
     }else{
@@ -98,7 +137,7 @@ int check(int hits){
         }
         if (same){
           hits++;
-          score += hits * nums;
+          score += hits * nums; //calculate the score
           eliminate(i,j,'R',nums);
           return hits;
         }
@@ -117,7 +156,7 @@ int check(int hits){
         }
         if (same){
           hits++;
-          score += hits * nums;
+          score += hits * nums; //calculate the score
           eliminate(i,j,'C',nums);
           return hits;
         }
@@ -235,8 +274,6 @@ void printBoard(){
         case '&': cout<<" \033[;35m"; break;
         case '+': cout<<" \033[;36m"; break;
         case '!': cout<<" \033[4;31m"; break;
-        //case '?': cout<<" \033[;37m"; break;
-        //case '~': cout<<" \033[4;37m"; break;
       }
       cout<<board[i][j]<<"\033[0m";
     }
